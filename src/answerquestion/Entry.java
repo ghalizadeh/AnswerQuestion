@@ -13,7 +13,7 @@ public abstract class Entry {
       private String question;
       private String[] answers;
      
-     public String getQuestion()
+    public String getQuestion()
     {
         return question;  
     }
