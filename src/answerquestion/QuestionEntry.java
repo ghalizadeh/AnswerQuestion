@@ -11,25 +11,25 @@ import java.util.Hashtable;
  *
  * @author Gh.Alizadeh
  */
-public class QuestionEntry extends Entry{
-    
+public class QuestionEntry extends Entry {
+
     @Override
-    public void setQuestion(String QuestionValue)
-    {
-        if(QuestionValue.length()<=255)
-          super.setQuestion(QuestionValue);
-        else
-             throw new IllegalArgumentException("Question must be maximum 255 characters");
-    } 
-    
-    
+    public void setQuestion(String QuestionValue) {
+        if (QuestionValue.length() <= 255) {
+            super.setQuestion(QuestionValue);
+        } else {
+            throw new IllegalArgumentException("Question must be maximum 255 characters");
+        }
+    }
+
     @Override
-    public void setAnswers(String[] AnswersValue)
-    {
-        for(String answer:AnswersValue)
-           if(answer.length()>255)
-               throw new IllegalArgumentException("Each answer must be maximum 255 characters");
+    public void setAnswers(String[] AnswersValue) {
+        for (String answer : AnswersValue) {
+            if (answer.length() > 255) {
+                throw new IllegalArgumentException("Each answer must be maximum 255 characters");
+            }
+        }
         super.setAnswers(AnswersValue);
     }
-   
+
 }

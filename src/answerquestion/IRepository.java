@@ -10,7 +10,10 @@ package answerquestion;
  * @author Gh.Alizadeh
  */
 public interface IRepository {
-    void AddEntry(String Question,Entry entry); 
+
+    void AddEntry(String Question, Entry entry);
+
     Entry getEntry(String Question);
+
     boolean hasEntry(String Question);
 }

@@ -23,16 +23,16 @@ public class Programm {
         QuestionController Controller = new QuestionController(Repository);
         while (true) {
             System.out.println(">> Ask a question or Define a question");
-            String input = sc.nextLine();
+            String input = sc.nextLine().trim();
             if (input.indexOf("?") == -1) {
                 System.out.println("Incorrect Format");
                 continue;
             }
             String[] SplitedInput = input.split("\\?", 0);
-            if (SplitedInput.length == 1) {   // Find the answer to specific question   
-                String _Question=SplitedInput[0];
+            if (SplitedInput.length == 1) {
+                String _Question = SplitedInput[0];
                 System.out.println(Controller.AnswerQuestion(_Question));
-            } else if (SplitedInput.length == 2) {  //Define a question with answer/answers
+            } else if (SplitedInput.length == 2) {
                 System.out.println(Controller.DefineQuestion(input));
             } else {
                 System.out.println("Incorrect Format");

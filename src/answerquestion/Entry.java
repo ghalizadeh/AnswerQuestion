@@ -10,26 +10,23 @@ package answerquestion;
  * @author Gh.Alizadeh
  */
 public abstract class Entry {
-      private String question;
-      private String[] answers;
-     
-    public String getQuestion()
-    {
-        return question;  
+
+    private String question;
+    private String[] answers;
+
+    public String getQuestion() {
+        return question;
     }
-      
-    public void setQuestion(String QuestionValue)
-    {
-          question= QuestionValue;
-    } 
-    
-    public String[] getAnswers()
-    {
+
+    public void setQuestion(String QuestionValue) {
+        question = QuestionValue;
+    }
+
+    public String[] getAnswers() {
         return answers;
     }
-    
-    public void setAnswers(String[] AnswersValue)
-    {
-        answers= AnswersValue;
+
+    public void setAnswers(String[] AnswersValue) {
+        answers = AnswersValue;
     }
 }
