@@ -56,9 +56,10 @@ public class QuestionController {
                 {
                   for(String answer:Founded_Question.getAnswers())
                   {
-                    AnswerBuilder.append(answer);
+                    AnswerBuilder.append(answer);                
                     AnswerBuilder.append("\n");
                   }
+                  AnswerBuilder.deleteCharAt(AnswerBuilder.length()-1);
                 }
             }
             else

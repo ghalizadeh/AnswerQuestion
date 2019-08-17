@@ -53,7 +53,7 @@ public class QuestionControllerTest {
         String input = "What is Peters favorite food? \"Pizza\" \"Spaghetti\" \"Ice cream\"";
         instance.DefineQuestion(input);
         String Question = "What is Peters favorite food"; 
-        String expResult = "Pizza\nSpaghetti\nIce cream\n";
+        String expResult = "Pizza\nSpaghetti\nIce cream";
         String result2 = instance.AnswerQuestion(Question);
         assertEquals(expResult, result2);
     }
@@ -70,24 +70,25 @@ public class QuestionControllerTest {
     @Test
     public void test4_DefineBadFormatQuestion() {
         System.out.println("test4_DefineBadFormatQuestion");
-        String Question = "What is Peters favorite fooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
+        String input = "What is Peters favorite fooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
                 + "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"
                 + "ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooood? "
                 + "\"Pizza\" \"Spaghetti\" \"Ice cream\""; 
         String expResult = "Failed to defining the new question:\nQuestion must be maximum 255 characters";
-        String result = instance.DefineQuestion(Question);
+        String result = instance.DefineQuestion(input);
         assertEquals(expResult, result);   
     }
     
     @Test
     public void test5_DefineBadFormatAnswer() {
         System.out.println("test5_DefineBadFormatAnswer");
-        String Question = "What is Peters favorite food? \"Pizza\" \"Spaghetti\" \"Ice creammmmmmmmmm"
+        String input = "What is Peters favorite food? \"Pizza\" \"Spaghetti\" \"Ice creammmmmmmmmm"
                 + "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
                 + "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
                 + "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm\""; 
         String expResult = "Failed to defining the new question:\nEach answer must be maximum 255 characters";
-        String result = instance.DefineQuestion(Question);
+        String result = instance.DefineQuestion(input);
         assertEquals(expResult, result);   
     }
+    
 }

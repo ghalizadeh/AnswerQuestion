@@ -12,12 +12,6 @@ import java.util.Hashtable;
  * @author Gh.Alizadeh
  */
 public class QuestionEntry extends Entry{
-
-    @Override
-    public String getQuestion()
-    {
-        return super.getQuestion();  
-    }
     
     @Override
     public void setQuestion(String QuestionValue)
@@ -28,11 +22,6 @@ public class QuestionEntry extends Entry{
              throw new IllegalArgumentException("Question must be maximum 255 characters");
     } 
     
-    @Override
-    public String[] getAnswers()
-    {
-        return super.getAnswers();
-    }
     
     @Override
     public void setAnswers(String[] AnswersValue)
