@@ -5,8 +5,6 @@
  */
 package answerquestion;
 
-import java.util.Hashtable;
-
 /**
  *
  * @author Gh.Alizadeh
